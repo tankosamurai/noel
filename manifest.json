@@ -15,6 +15,7 @@
     "scripts": [
       "sizzle.js",
       "lib/garelly_url.js",
+      "lib/page_url.js",
       "lib/extractor.js",
       "lib/garelly_extractor.js",
       "lib/page_extractor.js",
