@@ -14,6 +14,7 @@
   "background": {
     "scripts": [
       "sizzle.js",
+      "lib/fetch.js",
       "lib/garelly_url.js",
       "lib/page_url.js",
       "lib/extractor.js",
