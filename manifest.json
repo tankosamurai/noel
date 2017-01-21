@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "Noel",
+  "version": "0.1",
+
+  "description": "WebExtension for nhentai.net",
+
+  "permissions": [
+    "*://nhentai.net/*",
+    "*://*.nhentai.net/*",
+    "contextMenus"
+  ],
+
+  "background": {
+    "scripts": [
+      "background/background.js"
+    ]
+  }
+}
