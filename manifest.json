@@ -16,6 +16,7 @@
       "sizzle.js",
       "lib/extractor.js",
       "lib/garelly_extractor.js",
+      "lib/page_extractor.js",
       "background/background.js"
     ]
   }
