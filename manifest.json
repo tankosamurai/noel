@@ -13,6 +13,7 @@
 
   "background": {
     "scripts": [
+      "sizzle.js",
       "background/background.js"
     ]
   }
