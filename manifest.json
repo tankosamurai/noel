@@ -15,6 +15,7 @@
     "scripts": [
       "sizzle.js",
       "lib/extractor.js",
+      "lib/garelly_extractor.js",
       "background/background.js"
     ]
   }
