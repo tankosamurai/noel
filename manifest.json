@@ -24,6 +24,7 @@
       "lib/garelly_extractor.js",
       "lib/page_extractor.js",
       "lib/image_filename_template.js",
+      "lib/contextmenus_base.js",
       "test/page_url_test.js",
       "test/runner.js",
       "background/background.js"
