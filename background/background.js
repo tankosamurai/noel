@@ -30,9 +30,9 @@ const cm = ContextMenusBase.bind({
       });
     });
 
-    if (browser.notifications) {
+    if (chrome.notifications) {
       collections.forEach((results) => {
-        browser.notifications.create({
+        chrome.notifications.create({
           type: "basic",
           title: "Running tests has finished.",
           message: results.toString(),
@@ -59,7 +59,7 @@ function onClickDownload(info, tab) {
           let pageExtractor = new PageExtractor(xhr.responseText, "text/html");
           let imageUrl = ImageURL.fromString(pageExtractor.imageSrc());
 
-          browser.downloads.download({
+          chrome.downloads.download({
             url: imageUrl.toString(),
             filename: imageFilenameTemplate("%gid%_%id%", imageUrl),
           });
