@@ -30,7 +30,7 @@
       "test/page_url_test.js",
       "test/test_result.js",
       "test/test_result_collection.js",
-      "test/runner.js",
+      "test/test_runner.js",
       "background/background.js"
     ]
   }
