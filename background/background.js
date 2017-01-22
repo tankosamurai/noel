@@ -1,15 +1,17 @@
-browser.contextMenus.create({
-  id: "download",
-  title: "Download this garally",
-  contexts: ["all"],
-  enabled: true,
-});
 
-browser.contextMenus.create({
-  id: "runTests",
-  title: "Run tests",
-  enabled: true,
-});
+const cm = ContextMenusBase.bind([
+  new ContextMenusItemBase({
+    id: "download",
+    title: "Download this gallery",
+  }, onClickDownload),
+  new ContextMenusItemBase({
+    id: "runTests",
+    title: "Run tests",
+  }, (info, tab) => {
+    const runner = new Runner([PageURLTest]);
+    runner.run();
+  }),
+]);
 
 function onClickDownload(info, tab) {
   let garellyUrl = GarellyURL.fromString(tab.url);
@@ -41,12 +43,3 @@ function onClickDownload(info, tab) {
   });
 
 }
-
-browser.contextMenus.onClicked.addListener((info, tab) => {
-  if (info.menuItemId === "download") {
-    onClickDownload(info, tab);
-  } else if (info.menuItemId === "runTests") {
-    const runner = new Runner([PageURLTest]);
-    runner.run();
-  }
-});
