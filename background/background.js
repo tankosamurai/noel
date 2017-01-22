@@ -36,6 +36,7 @@ const cm = ContextMenusBase.bind({
           type: "basic",
           title: "Running tests has finished.",
           message: results.toString(),
+          iconUrl: "images/ff4d00-0.png",
         });
       });
     }
