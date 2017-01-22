@@ -2,6 +2,7 @@
   "manifest_version": 2,
   "name": "Noel",
   "version": "0.2",
+  "author": "tankosamurai",
 
   "description": "WebExtension for nhentai.net",
 
@@ -33,6 +34,7 @@
       "test/test_result_collection.js",
       "test/test_runner.js",
       "background/background.js"
-    ]
+    ],
+    "persistent": false
   }
 }
