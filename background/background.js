@@ -5,6 +5,12 @@ browser.contextMenus.create({
   enabled: true,
 });
 
+browser.contextMenus.create({
+  id: "runTests",
+  title: "Run tests",
+  enabled: true,
+});
+
 function onClickDownload(info, tab) {
   let garellyUrl = GarellyURL.fromString(tab.url);
   let garellyPromise = fetch("GET", garellyUrl.toString(), () => {});
@@ -36,4 +42,11 @@ function onClickDownload(info, tab) {
 
 }
 
-browser.contextMenus.onClicked.addListener(onClickDownload);
+browser.contextMenus.onClicked.addListener((info, tab) => {
+  if (info.menuItemId === "download") {
+    onClickDownload(info, tab);
+  } else if (info.menuItemId === "runTests") {
+    const runner = new Runner([PageURLTest]);
+    runner.run();
+  }
+});
