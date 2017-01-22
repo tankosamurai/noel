@@ -27,6 +27,7 @@
       "lib/image_filename_template.js",
       "lib/contextmenus_base.js",
       "lib/contextmenus_item_base.js",
+      "test/gallery_url_test.js",
       "test/page_url_test.js",
       "test/test_result.js",
       "test/test_result_collection.js",
