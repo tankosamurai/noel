@@ -27,6 +27,7 @@
       "lib/contextmenus_base.js",
       "lib/contextmenus_item_base.js",
       "test/page_url_test.js",
+      "test/test_result.js",
       "test/runner.js",
       "background/background.js"
     ]
