@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Noel",
-  "version": "0.1",
+  "version": "0.2",
 
   "description": "WebExtension for nhentai.net",
 
