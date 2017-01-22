@@ -18,6 +18,7 @@
       "lib/garelly_url.js",
       "lib/page_url.js",
       "lib/extractor.js",
+      "lib/image_url.js",
       "lib/garelly_extractor.js",
       "lib/page_extractor.js",
       "background/background.js"
