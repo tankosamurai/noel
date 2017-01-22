@@ -5,7 +5,7 @@ browser.contextMenus.create({
   enabled: true,
 });
 
-browser.contextMenus.onClicked.addListener((info, tab) => {
+function onClickDownload(info, tab) {
   let garellyUrl = GarellyURL.fromString(tab.url);
   let garellyPromise = fetch("GET", garellyUrl.toString(), () => {});
   garellyPromise.then((xhr) => {
@@ -33,4 +33,7 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
       });
     }, Promise.resolve());
   });
-});
+
+}
+
+browser.contextMenus.onClicked.addListener(onClickDownload);
