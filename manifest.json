@@ -21,6 +21,7 @@
       "lib/image_url.js",
       "lib/garelly_extractor.js",
       "lib/page_extractor.js",
+      "lib/image_filename_template.js",
       "background/background.js"
     ]
   }
