@@ -1,17 +1,21 @@
+const cm = ContextMenusBase.bind({
 
-const cm = ContextMenusBase.bind([
-  new ContextMenusItemBase({
-    id: "download",
+  download: {
     title: "Download this gallery",
-  }, onClickDownload),
-  new ContextMenusItemBase({
-    id: "runTests",
+  },
+
+  runTests: {
     title: "Run tests",
-  }, (info, tab) => {
+  },
+
+  onDownload: onClickDownload,
+
+  onRunTests: (info, tab) => {
     const runner = new Runner([PageURLTest]);
     runner.run();
-  }),
-]);
+  },
+
+});
 
 function onClickDownload(info, tab) {
   let garellyUrl = GarellyURL.fromString(tab.url);
