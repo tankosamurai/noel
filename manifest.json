@@ -9,6 +9,7 @@
     "*://nhentai.net/*",
     "*://*.nhentai.net/*",
     "tabs",
+    "downloads",
     "contextMenus"
   ],
 
