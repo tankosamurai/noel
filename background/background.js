@@ -16,10 +16,19 @@ const cm = ContextMenusBase.bind({
 
   onRunTests: (info, tab) => {
     const runner = new TestRunner([
+      GalleryURLTest,
       PageURLTest,
     ]);
 
     const collections = runner.run();
+
+    collections.forEach((collection) => {
+      collection.results.forEach((result) => {
+        if (!result.isSuccess) {
+          console.log(result.toString());
+        }
+      });
+    });
 
     if (browser.notifications) {
       collections.forEach((results) => {
