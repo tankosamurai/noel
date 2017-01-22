@@ -13,20 +13,28 @@ class Runner {
   }
 
   run() {
+    const collections = [];
+
     this.tests.forEach((test) => {
       const keys = Object.keys(test);
+      const results = new TestResultCollection();
+
       keys.forEach((testName, index) => {
         try {
           if (test[testName]()) {
-            this.succeeded(test, testName, index, keys);
+            results.push(new TestResult(testName, true));
           } else {
-            this.failed(test, testName, index, keys, {});
+            results.push(new TestResult(testName, false));
           }
         } catch(e) {
-          this.failed(test, testName, index, keys, e);
+          results.push(new TestResult(testName, false));
         }
       });
+
+      collections.push(results);
     });
+
+    return collections;
   }
 
 }
