@@ -15,7 +15,7 @@ const cm = ContextMenusBase.bind({
   onDownload: onClickDownload,
 
   onRunTests: (info, tab) => {
-    const runner = new Runner([
+    const runner = new TestRunner([
       PageURLTest,
     ]);
 

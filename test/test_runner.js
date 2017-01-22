@@ -1,4 +1,4 @@
-class Runner {
+class TestRunner {
 
   constructor(tests) {
     this.tests = tests;
