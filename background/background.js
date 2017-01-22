@@ -4,6 +4,10 @@ const cm = ContextMenusBase.bind({
     title: "Download this gallery",
   },
 
+  separator: {
+    type: "separator",
+  },
+
   runTests: {
     title: "Run tests",
   },
