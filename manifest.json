@@ -18,11 +18,11 @@
     "scripts": [
       "sizzle.js",
       "lib/fetch.js",
-      "lib/garelly_url.js",
+      "lib/gallery_url.js",
       "lib/page_url.js",
       "lib/extractor.js",
       "lib/image_url.js",
-      "lib/garelly_extractor.js",
+      "lib/gallery_extractor.js",
       "lib/page_extractor.js",
       "lib/image_filename_template.js",
       "lib/contextmenus_base.js",

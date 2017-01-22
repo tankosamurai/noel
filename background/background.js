@@ -35,11 +35,11 @@ const cm = ContextMenusBase.bind({
 });
 
 function onClickDownload(info, tab) {
-  let garellyUrl = GarellyURL.fromString(tab.url);
-  let garellyPromise = fetch("GET", garellyUrl.toString(), () => {});
-  garellyPromise.then((xhr) => {
-    let garellyExtractor = new GarellyExtractor(xhr.responseText, "text/html");
-    let pageUrls = garellyExtractor.pageAnchorHrefs().map((href) => {
+  let galleryUrl = GalleryURL.fromString(tab.url);
+  let galleryPromise = fetch("GET", galleryUrl.toString(), () => {});
+  galleryPromise.then((xhr) => {
+    let galleryExtractor = new GalleryExtractor(xhr.responseText, "text/html");
+    let pageUrls = galleryExtractor.pageAnchorHrefs().map((href) => {
       let pageUrl = PageURL.fromString(href)
       return pageUrl;
     });
