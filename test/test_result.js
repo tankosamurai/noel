@@ -5,4 +5,12 @@ class TestResult {
     this.isSuccess = isSuccess;
   }
 
+  toString() {
+    if (this.isSuccess) {
+      return `[success] ${this.name}`;
+    } else {
+      return `[failed] ${this.name}`;
+    }
+  }
+
 }
