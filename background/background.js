@@ -15,8 +15,21 @@ const cm = ContextMenusBase.bind({
   onDownload: onClickDownload,
 
   onRunTests: (info, tab) => {
-    const runner = new Runner([PageURLTest]);
-    runner.run();
+    const runner = new Runner([
+      PageURLTest,
+    ]);
+
+    const collections = runner.run();
+
+    if (browser.notifications) {
+      collections.forEach((results) => {
+        browser.notifications.create({
+          type: "basic",
+          title: "Running tests has finished.",
+          message: results.toString(),
+        });
+      });
+    }
   },
 
 });
