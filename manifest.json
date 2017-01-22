@@ -8,6 +8,7 @@
   "permissions": [
     "*://nhentai.net/*",
     "*://*.nhentai.net/*",
+    "tabs",
     "contextMenus"
   ],
 
