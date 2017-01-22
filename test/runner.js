@@ -4,25 +4,26 @@ class Runner {
     this.tests = tests;
   }
 
-  succeeded(test, testName) {
-    console.log(`[success] ${testName}`);
+  succeeded(test, testName, index, keys) {
+    console.log(`[success] ${index + 1}/${keys.length} ${testName}`);
   }
 
-  failed(test, testName, e) {
-    console.log(`[failed] ${testName}`);
+  failed(test, testName, index, keys, e) {
+    console.log(`[failed] ${index + 1}/${keys.length} ${testName}`);
   }
 
   run() {
     this.tests.forEach((test) => {
-      Object.keys(test).forEach((testName) => {
+      const keys = Object.keys(test);
+      keys.forEach((testName, index) => {
         try {
           if (test[testName]()) {
-            this.succeeded(test, testName);
+            this.succeeded(test, testName, index, keys);
           } else {
-            this.failed(test, testName, {});
+            this.failed(test, testName, index, keys, {});
           }
         } catch(e) {
-          this.failed(test, testName, e);
+          this.failed(test, testName, index, keys, e);
         }
       });
     });
