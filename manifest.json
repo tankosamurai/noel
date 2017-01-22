@@ -24,6 +24,7 @@
       "lib/garelly_extractor.js",
       "lib/page_extractor.js",
       "lib/image_filename_template.js",
+      "test/runner.js",
       "background/background.js"
     ]
   }
